@@ -1,0 +1,37 @@
+<h1>New post</h1>
+
+<%= error_messages_for :post %>
+
+<% form_for(@post) do |f| %>
+  <p>
+    <b>Post title</b><br />
+    <%= f.text_field :post_title %>
+  </p>
+
+  <p>
+    <b>Post text</b><br />
+    <%= f.text_area :post_text %>
+  </p>
+
+  <p>
+    <b>Date of creation</b><br />
+    <%= f.date_select :date_of_creation %>
+  </p>
+
+  <p>
+    <b>Category</b><br />
+	<select name="category"> 
+        <% @cat.each do |category| %> 
+        <option value="<%= category.id %>"> 
+        <%= category.category_name %> 
+        </option> 
+        <% end %> 
+    </select>  
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', posts_path %>

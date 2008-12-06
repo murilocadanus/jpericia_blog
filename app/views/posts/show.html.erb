@@ -1,0 +1,23 @@
+<p>
+  <b>Post title:</b>
+  <%=h @post.post_title %>
+</p>
+
+<p>
+  <b>Post text:</b>
+  <%=h @post.post_text %>
+</p>
+
+<p>
+  <b>Date of creation:</b>
+  <%=h @post.date_of_creation %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @post.category.category_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

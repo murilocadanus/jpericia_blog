@@ -1,0 +1,9 @@
+<% for post in @posts %>
+	<div class="post">
+		<div class="header">
+			<h3><%=h post.post_title %></h3>
+			<div class="date"><%=h post.date_of_creation.strftime("%b %d, %Y") %></div>
+		</div>
+		<div class="content"><%= post.post_text %></div>			
+	</div>
+<% end %>

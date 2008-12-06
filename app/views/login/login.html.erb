@@ -1,0 +1,8 @@
+<p><center style="color: red"><%= flash[:notice] %></center></p><br>
+<% form_tag  :action=> 'do_login' do %>
+
+	<p><label for="name">Name:</label> <input type="text" id="username" name="username" /></p>
+	<p><label for="password">Password:</label> <input type="password" id="password" name="password" /></p>
+	
+    <p class="submit"><input type="submit" value='Login'/></p>
+<% end %>
